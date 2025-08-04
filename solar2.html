@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Animation</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: black;
+        }
+
+        .galaxy {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border: 10px solid blue;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .sun {
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+            border: 3px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 10;
+        }
+
+        .earth, .mars, .venus, .mercury {
+            border: 3px solid rgb(221, 25, 214);
+            border-radius: 50%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: rotate 8s linear infinite;
+        }
+
+        .earth {
+            height: 600px;
+            width: 600px;
+        }
+
+        .mars {
+            height: 450px;
+            width: 450px;
+            animation-duration: 6s;
+        }
+
+        .venus {
+            height: 300px;
+            width: 300px;
+            animation-duration: 4s;
+        }
+
+        .mercury {
+            height: 200px;
+            width: 200px;
+            border: 3px solid green;
+            animation-duration: 3s;
+        }
+
+        .qst, .rst, .ust, .ost {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            background-color: white;
+        }
+
+        .qst, .rst, .ust {
+            border: 3px solid rgb(255, 35, 226);
+        }
+
+        .ost {
+            border: 3px solid rgb(62, 128, 0);
+        }
+
+        .qst {
+            bottom: -25px;
+        }
+
+        .rst {
+            top: -25px;
+        }
+
+        .ust {
+            bottom: -25px;
+        }
+
+        .ost {
+            top: 5px;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="galaxy">
+        <div class="sun"></div>
+
+        <div class="earth">
+            <div class="qst"></div>
+
+            <div class="mars">
+                <div class="rst"></div>
+
+                <div class="venus">
+                    <div class="ust"></div>
+
+                    <div class="mercury">
+                        <div class="ost"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
